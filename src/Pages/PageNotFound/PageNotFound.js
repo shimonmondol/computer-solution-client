@@ -2,8 +2,10 @@ import React from 'react';
 
 const PageNotFound = () => {
     return (
-        <div class="hero min-h-screen bg-base-200">
-            <h2>Page not found</h2>
+        <div>
+            <div class="hero-content flex-col lg:flex-row">
+                <img src="https://i.ibb.co/1QWyKFx/Page.png" />
+            </div>
         </div>
     );
 };
