@@ -3,14 +3,21 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const items = <>
-        <li><Link to="/">Home</Link></li>
+        <div class="dropdown">
+            <li><Link to="/">Home</Link></li>
+            <ul tabindex="0" class="dropdown-content menu p-2 shadow rounded-box w-18">
+                <li><Link to="/hardware">Hardware</Link></li>
+                <li><Link to="/software">Software</Link></li>
+            </ul>
+        </div>
+        <li><Link to="/businessSummary">Business Summary</Link></li>
         <li><Link to="/reviews">Reviews</Link></li>
         <li><Link to="/blogs">Blogs</Link></li>
         <li><Link to="/portfolio">My Portfolio</Link></li>
         <li><Link to="/login">Login</Link></li>
     </>
     return (
-        <div class="navbar bg-base-100">
+        <div class="navbar bg-accent">
             <div class="navbar-start">
                 <div class="dropdown">
                     <label tabindex="0" class="btn btn-ghost lg:hidden">

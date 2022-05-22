@@ -3,7 +3,7 @@ import React from 'react';
 const Portfolio = () => {
     return (
         <div class="hero min-h-screen bg-base-200">
-            <div class="hero-content flex-col lg:flex-row">
+            <div class="hero-content flex-col lg:flex-row mb-32">
                 <img src="https://i.ibb.co/9TVCw9f/Shimon-Mondol.jpg" class="max-w-sm rounded-lg shadow-2xl" />
                 <div className="mx-3 mt-1 text-2xl font-bold">
                     <h1>Name : Shimon Kumar Mondol</h1>
