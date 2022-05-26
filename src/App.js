@@ -16,6 +16,11 @@ import Home from './Pages/Home/Home';
 import Service from './Pages/Product/Service';
 import Purchase from './Pages/Purchase/Purchase/Purchase';
 import Section from './Pages/Section/Section';
+import Dashboard from './Pages/Dashboard/Dashboard';
+import MyOrders from './Pages/Dashboard/MyOrders';
+import MyReview from './Pages/Dashboard/MyReviews';
+import MyProfile from './Pages/Dashboard/MyProfile';
+
 
 
 
@@ -34,10 +39,16 @@ function App() {
         <Route path="/purchase" element={<RequireAuth>
           <Purchase />
         </RequireAuth>} />
+        <Route path="dashboard" element={<RequireAuth>
+          <Dashboard />
+        </RequireAuth>
+        } >
+          <Route index element={<MyOrders></MyOrders>}></Route>
+          <Route path='review' element={<MyReview></MyReview>}></Route>
+          <Route path='profile' element={<MyProfile></MyProfile>}></Route>
+        </Route>
         <Route path="/businessSummary" element={<BusinessSummary />} />
-        <Route path="/portfolio" element={<RequireAuth>
-          <Portfolio />
-        </RequireAuth>} />
+        <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<SignUp />} />
