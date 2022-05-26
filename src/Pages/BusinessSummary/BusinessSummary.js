@@ -2,7 +2,7 @@ import React from 'react';
 
 const BusinessSummary = () => {
     return (
-        <div class="hero min-h-screen text-justify bg-base-200 ">
+        <div class="hero min-h-screen d-flex text-justify bg-base-300 ">
             <div>
                 <div>
                     <div className='mx-48'>

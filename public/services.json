@@ -1,0 +1,57 @@
+[
+  {
+    "_id": 1,
+    "name": "Hard Drive",
+    "description": "Hard drive is an electro-mechanical data storage device that stores and retrieves digital data using magnetic storage.",
+    "price": "$50",
+    "minimum": [
+      "40",
+      "50"
+    ]
+  },
+  {
+    "_id": 2,
+    "name": "Ram",
+    "description": "Ram is a form of computer memory that can be read and typically used to store working data and machine code.",
+    "price": "$40",
+    "minimum": [
+      40
+    ]
+  },
+  {
+    "_id": 3,
+    "name": "Pen Drive",
+    "description": "A USB flash drive is a data storage device that includes flash memory with an integrated USB interface.",
+    "price": "$15",
+    "minimum": [
+      40
+    ]
+  },
+  {
+    "_id": 4,
+    "name": "Router",
+    "description": "Router is a networking device that forwards data packets between computer networks.",
+    "price": "$30",
+    "minimum": [
+      40
+    ]
+  },
+  {
+    "_id": 5,
+    "name": "Mouse",
+    "description": "A computer mouse is a hand-held pointing device that detects two-dimensional motion relative to a surface.",
+    "price": "$10",
+    "minimum": [
+      40
+    ]
+  },
+  {
+    "_id": 6,
+    "name": "Keyboard",
+    "description": "Keyboard is a peripheral input device modeled after the typewriter keyboard which uses an arrangement of buttons.",
+    "price": "$10",
+    "minimum": [
+      40
+    ]
+  }
+]

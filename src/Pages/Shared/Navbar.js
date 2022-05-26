@@ -18,11 +18,11 @@ const Navbar = () => {
                 <li><Link to="/software">Software</Link></li>
             </ul>
         </div>
+        <li><Link to="/product">Product</Link></li>
         <li><Link to="/businessSummary">Business Summary</Link></li>
-        <li><Link to="/reviews">Reviews</Link></li>
         <li><Link to="/blogs">Blogs</Link></li>
         <li><Link to="/portfolio">My Portfolio</Link></li>
-        <li>{user ? <button className="btn btn-ghost" onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}</li>
+        <li>{user ? <button className="btn btn-ghost" onClick={logout} >Log Out</button> : <Link to="/login">Login</Link>}</li>
     </>
     return (
         <div class="navbar bg-accent">
