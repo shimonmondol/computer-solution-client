@@ -20,6 +20,7 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import MyOrders from './Pages/Dashboard/MyOrders';
 import MyReview from './Pages/Dashboard/MyReviews';
 import MyProfile from './Pages/Dashboard/MyProfile';
+import Review from './Pages/Review/Review';
 
 
 
@@ -34,8 +35,10 @@ function App() {
         <Route path="/software" element={<Software />} />
         <Route path="/hardware" element={<Hardware />} />
         <Route path="/product" element={<Product />} />
+        <Route path="/review" element={<Review />} />
         <Route path="/service" element={<Service />} />
         <Route path="/Service/:Serviceid" element={<Section />} />
+        <Route path="/review:/dashboard/review" element={<Review />} />
         <Route path="/purchase" element={<RequireAuth>
           <Purchase />
         </RequireAuth>} />
