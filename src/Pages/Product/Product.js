@@ -8,6 +8,7 @@ const Product = () => {
         <div>
             <Banner></Banner>
             <AllProducts></AllProducts>
+
         </div>
     );
 };
