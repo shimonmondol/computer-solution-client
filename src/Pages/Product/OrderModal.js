@@ -1,7 +1,38 @@
 import React from 'react';
+import auth from '../../firebase.init';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { toast } from 'react-toastify';
 
-const OrderModal = ({ details }) => {
-    const { name, minimum } = details;
+const OrderModal = ({ details, setDetails }) => {
+    const { _id, name, minimum } = details;
+    const [user, loading, errors] = useAuthState(auth);
+
+    const handleOrder = event => {
+        event.preventDefault();
+        const minimum = event.target.minimum.value;
+
+        const order = {
+            detailsId: _id,
+            details: name,
+            minimum,
+            patient: user.email,
+            patientName: user.displayName,
+            phone: event.target.phone.value
+        }
+        fetch('http://localhost:5000/order', {
+            method: 'POST',
+            headers: {
+                'context-type': 'application/json'
+            },
+            body: JSON.stringify(order)
+        })
+
+            .then(res => res.json())
+            .then(data => {
+                setDetails(null);
+            })
+    }
+
     return (
         <div>
             <input type="checkbox" id="order-modal" class="modal-toggle" />

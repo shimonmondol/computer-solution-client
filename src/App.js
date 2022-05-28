@@ -21,6 +21,8 @@ import MyOrders from './Pages/Dashboard/MyOrders';
 import MyReview from './Pages/Dashboard/MyReviews';
 import MyProfile from './Pages/Dashboard/MyProfile';
 import Review from './Pages/Review/Review';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -57,6 +59,7 @@ function App() {
         <Route path="signup" element={<SignUp />} />
         <Route path="/*" element={<PageNotFound />} />
       </Routes>
+      <ToastContainer />
       <Footer></Footer>
     </div>
   );
