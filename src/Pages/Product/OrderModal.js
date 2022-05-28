@@ -45,8 +45,8 @@ const OrderModal = ({ details, setDetails }) => {
                     <label for="order-modal" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                     <h3 class="font-bold text-lg">Order for {name}</h3>
                     <form onSubmit={handleOrder} className='grid grid-cols-1 gap-3 justify-items-center mt-2'>
-                        <input type="text" name="name" className="input input-bordered w-full max-w-xs" />
-                        <input type="email" name="email" className="input input-bordered w-full max-w-xs" />
+                        <input type="text" name="name" placeholder="Your Name" className="input input-bordered w-full max-w-xs" />
+                        <input type="email" name="email" placeholder="Your Email" className="input input-bordered w-full max-w-xs" />
                         <input type="text" name="phone" placeholder="Phone Number" className="input input-bordered w-full max-w-xs" />
                         <input type="submit" placeholder="Submit" class="btn btn-primary w-full max-w-xs" />
                     </form>
