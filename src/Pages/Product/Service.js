@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const Service = ({ service }) => {
+const Service = ({ service, setDetails }) => {
     const { id, name, description, price, img, minimum } = service;
-    const Navigate = useNavigate();
 
-    const NavigatePService = id => {
-        Navigate(`/service/${id}`);
-    }
     const [quantity, setQuantity] = useState(5);
 
     const handleDecrement = () => {
@@ -43,7 +39,7 @@ const Service = ({ service }) => {
 
                 </div>
                 <div class="card-actions">
-                    <button disabled={minimum.length === 0} onClick={() => NavigatePService(id)} className="btn btn-primary">Buy Now</button>
+                    <label for="order-modal" disabled={minimum.length === 0} onClick={() => setDetails(service)} class="btn btn-primary">Buy Now</label>
                 </div>
             </div>
         </div>
