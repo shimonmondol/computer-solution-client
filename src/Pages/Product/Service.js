@@ -26,6 +26,11 @@ const Service = ({ service }) => {
             <div class="card-body items-center text-center">
                 <h2 class="card-title">{name}</h2>
                 <img className='w-60' src={img} alt="" />
+                <p>{
+                    minimum.length > 0
+                        ? <span>{minimum[0]}</span>
+                        : <span className='text-red-500'>Stock Out</span>
+                }</p>
                 <p>{minimum.length} Products Available </p>
                 <p className='text-justify'>{description}</p>
                 <p>Price: {price} </p>
@@ -34,12 +39,11 @@ const Service = ({ service }) => {
                 <div className='input-group'>
                     <button type="button" onClick={handleDecrement} className='btn mt-6'>-</button>
                     <div>{quantity}<input type="text" placeholder="" class="input w-48" /></div>
-
                     <button type="button" onClick={handleIncrement} className='btn mt-6'>+</button>
 
                 </div>
                 <div class="card-actions">
-                    <button onClick={() => NavigatePService(id)} className="btn btn-primary">Buy Now</button>
+                    <button disabled={minimum.length === 0} onClick={() => NavigatePService(id)} className="btn btn-primary">Buy Now</button>
                 </div>
             </div>
         </div>
